@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<Defs>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>cvnexodisruption</defName>
+		<label>Exostrider Railgun</label>
+		<description>S</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>Explosion_MechBandShockwave</shotSound>
+		
+		<projectile>CVNmoleculardestabalizationwave</projectile>
+		<reloadTimer>10.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>1</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		<chargePerAmmoCount>5</chargePerAmmoCount>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2.95</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>0</minRange>
+		<maxRange>30.9</maxRange>
+		
+	<modExtensions>
+<li Class = "Vehicles.VehicleDamageMultiplierDefModExtension">
+  <multiplier>30</multiplier>
+</li>
+	</modExtensions>
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>5</ticksBetweenShots>
+				<ticksBetweenBursts>5</ticksBetweenBursts>
+				<label>Single</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+             				<texPath>Things/Vehicles/Exostrider/ExoStryder_Cannon2</texPath>
+					<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+					<shaderType>CutoutComplexPattern</shaderType>
+					<drawSize>(6, 6)</drawSize>
+		</graphicData>
+		
+		
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoRedstandard</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+</Defs>

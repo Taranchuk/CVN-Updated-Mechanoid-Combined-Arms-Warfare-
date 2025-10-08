@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CVNGravitywell_build</defName>
+		<label>Gravity Well</label>
+		<description>The Gravity Well is a large mantis like mech which manipulates gravity as it's primary weapon, this allows the Gravity Well to stay light and much faster than similar walkers but just as armored as one above it's weight class, the Gravity Well walker primarily uses three abilities, it's melee strikes which remove then collapses gravitational energy onto a location, it's Phase Walk, which it utilizes the energy intensive cloaking device to sneak to the target location and finally the Void Undertow which drags all targets in an area to a singular point and causes them to take minor blunt damage for each unit that was pulled.
+\n\n&lt;color=#FFA500&gt;Uses Recharges claws with 1 low energy canisters .&lt;/color&gt; \n\n&lt;color=#00ddc0&gt;Requires 8 bandwith, has no capacity for advisory crew, powered by mechanoid cells similar to those found in clusters.&lt;/color&gt; \n\n&lt;color=#FF0000&gt; Hostile Gravitywells will pull your frontline into one location to cut them all down, the Gravitywell will close the initial distance using it's phasewalk.&lt;/color&gt;</description>
+	
+			<designationCategory>Biotech</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Gravitywell/MMantis</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(9, 9)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(7, 7)</size>
+		<researchPrerequisites>
+			<li>HighMechtech</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<CVNMechComposite>14</CVNMechComposite>
+			<ComponentIndustrial>15</ComponentIndustrial>
+			<SubcoreHigh>2</SubcoreHigh>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		
+		<thingToSpawn>CVNGravitywell</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+
+</Defs>

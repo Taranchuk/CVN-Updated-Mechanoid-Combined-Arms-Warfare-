@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>CVN_Burrow</defName>
+    <label>burrow</label>
+    <description>text.</description>
+    <iconPath>UI/Abilities/MechLongJump</iconPath>
+    <cooldownTicksRange>480</cooldownTicksRange>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <label>burrow</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>3</warmupTime>
+      <minRange>5.9</minRange>
+      <range>50</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+	<comps>
+		<li Class="taranchuk_vehicleabilities.CompProperties_Burrow">
+			<warmupEffecter>ApocrionAttached</warmupEffecter>
+			<spawnerThing>CVN_PawnSpawner</spawnerThing>
+			<baseRespawnDuration>300</baseRespawnDuration>
+			<respawnDurationPerCell>30</respawnDurationPerCell>
+		</li>
+	</comps>
+  </AbilityDef>
+  <AbilityDef>
+    <defName>CVN_BurrowII</defName>
+    <label>Phasewalk</label>
+    <description>text.</description>
+    <iconPath>UI/Abilities/MechLongJump</iconPath>
+    <cooldownTicksRange>780</cooldownTicksRange>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <label>burrow</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>3</warmupTime>
+      <minRange>5.9</minRange>
+      <range>80</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+	<comps>
+		<li Class="taranchuk_vehicleabilities.CompProperties_Burrow">
+			<warmupEffecter>ApocrionAttached</warmupEffecter>
+			<spawnerThing>CVN_PawnSpawner</spawnerThing>
+			<baseRespawnDuration>200</baseRespawnDuration>
+			<respawnDurationPerCell>30</respawnDurationPerCell>
+		</li>
+	</comps>
+  </AbilityDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>CVN_PawnSpawner</defName>
+    <label>(dev) pawn spawner</label>
+    <description>(dev) pawn spawner</description>
+	<thingClass>taranchuk_vehicleabilities.PawnSpawner</thingClass>
+    <graphicData>
+      <texPath>Things/Mote/Transparent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Floor</altitudeLayer>
+    <rotatable>false</rotatable>
+    <destroyable>false</destroyable>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <selectable>false</selectable>
+    <size>(1,1)</size>
+    <neverOverlapFloors>true</neverOverlapFloors>
+    <blockPlants>true</blockPlants>
+    <building>
+      <isEdifice>false</isEdifice>
+      <claimable>false</claimable>
+      <deconstructible>false</deconstructible>
+    </building>
+  </ThingDef>
+  
+<AbilityDef>
+    <defName>DoDeconstruct</defName>
+    <label>decon item</label>
+    <description>example</description>
+    <iconPath>UI/Abilities/PiercingSpine</iconPath>
+    <cooldownTicksRange>60</cooldownTicksRange>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>false</aiCanUse>
+    <statBases>
+            <Ability_EffectRadius>15</Ability_EffectRadius>
+        </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>15.9</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>PiercingSpine_Launch</soundCast>
+      <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="DeconstructAbility.CompProperties_AbilityDeconstructInArea">
+                <totalDuration>5000</totalDuration>
+                <interval>50</interval>
+                <isDeconstructAllAtOnce>false</isDeconstructAllAtOnce>
+                <numToDeconstructPerTrigger>3</numToDeconstructPerTrigger>
+                <effectOnDeconstruct>CVN_HeliosImpact</effectOnDeconstruct>
+                <effectOnCaster>ConstructMetal</effectOnCaster>
+            </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

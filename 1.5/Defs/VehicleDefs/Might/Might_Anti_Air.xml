@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef ParentName="BaseBullet">
+		<defName>mightantiair</defName>
+		<label>high-explosive shell</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		
+		<graphicData>
+			<texPath>Things/projectiles/BlueEnergy_Shot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.5</armorPenetrationBase>
+			<explosionRadius>1.1</explosionRadius>
+			<speed>360</speed>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+		</projectile>
+		<modExtensions>
+			<li Class="taranchuk_flightcombat.ProjectileModes">
+				<antiAir>true</antiAir>
+				<ground>true</ground>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>mightaacannon</defName>
+		<label>Anti Air Cannons</label>
+		<description>S</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>Shot_Autocannon</shotSound>
+		
+		<projectile>mightantiair</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>60</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2.95</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>0</minRange>
+		<maxRange>122.9</maxRange>
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>10</shotsPerBurst>
+				<ticksBetweenShots>5</ticksBetweenShots>
+				<ticksBetweenBursts>5</ticksBetweenBursts>
+				<label>Burst</label>
+				<spreadRadius>5</spreadRadius>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>Things/Vehicles/Might/MechChargeCannonTurret_Top</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoBluestandard</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>CVNHR_Kenbeam</defName>
+		<label>Helio Shot</label>
+		<description>a beam of stardust particle</description>
+		<thingClass>taranchuk_lasers.LaserProjectile</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+		<seeThroughFog>true</seeThroughFog>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/projectiles/keneticbeam</texPath>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>0.5</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Thump</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationBase>2</armorPenetrationBase>
+			<stoppingPower>5</stoppingPower>
+			<speed>10000</speed>
+		</projectile>
+		<modExtensions>
+			<li Class="taranchuk_lasers.LaserProperties">
+				<damageTickRate>7</damageTickRate>
+				<lifetimeTicks>3</lifetimeTicks>
+				<beamWidth>0.5</beamWidth>
+				<beamWidthDrawScale>0.3</beamWidthDrawScale>
+				<sweepRatePerTick>0</sweepRatePerTick>
+				<maxSweepAngle>0</maxSweepAngle>
+				<damageThingsAcrossBeamLine>false</damageThingsAcrossBeamLine>
+				<debugCells>false</debugCells>
+				<groundFleckDef>Fleck_BeamBurn</groundFleckDef>
+				<endEffecterDef>GraserBeam_End</endEffecterDef>
+				<fleckChancePerTick>0.0</fleckChancePerTick>
+				<textureScrollOffsetPerTick>(0, -0)</textureScrollOffsetPerTick>
+				<lockOnTarget>false</lockOnTarget>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>mightantiinfantry</defName>
+		<label>Anti Air Cannons</label>
+		<description>S</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>Shot_Autocannon</shotSound>
+		
+		<projectile>CVNHR_Kenbeam</projectile>
+		<reloadTimer>3.5</reloadTimer>
+		<warmUpTimer>0.0</warmUpTimer>
+		
+		<magazineCapacity>60</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2.95</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>0</minRange>
+		<maxRange>42.9</maxRange>
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>3</ticksBetweenShots>
+				<ticksBetweenBursts>3</ticksBetweenBursts>
+				<label>Ripper</label>
+				<spreadRadius>7</spreadRadius>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>Things/Vehicles/Might/MechChaingunTurret_Topprimary</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoBluestandard</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+</Defs>

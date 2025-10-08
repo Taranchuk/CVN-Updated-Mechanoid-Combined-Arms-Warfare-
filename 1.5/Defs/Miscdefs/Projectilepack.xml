@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Normmech7_missile</defName>
+		<label>Missile</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		
+		<graphicData>
+			<texPath>Things/projectiles/Missile_Proj</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2</drawSize>
+		</graphicData>
+		
+		<projectile>
+			<damageDef>MechElecShockwave</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<speed>90</speed>
+      			<flyOverhead>true</flyOverhead>
+			<explosionRadius>3.1</explosionRadius>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+		<comps>
+			<li Class="taranchuk_homingprojectiles.CompProperties_HomingProjectile">
+				<tickRate>10</tickRate>
+				<lifetimeTicks>30000</lifetimeTicks>
+				<delayTurnInTicks>20</delayTurnInTicks>
+				<initialSpreadAngle>20</initialSpreadAngle>
+				<tailMote>CVN_OrbMote</tailMote>
+				<effectLifetime>600</effectLifetime>
+				<effectSize>2</effectSize>
+			</li>
+		</comps>
+		<drawOffscreen>true</drawOffscreen>
+	</ThingDef>
+
+	<ThingDef ParentName="MoteBase">
+        <defName>CVN_OrbMote</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+			<texPath>Things/Mote/Smoke</texPath>
+			<renderInstanced>true</renderInstanced>
+        </graphicData>
+        <mote>
+            <fadeInTime>0.05</fadeInTime>
+            <fadeOutTime>0.05</fadeOutTime>
+            <solidTime>1.9</solidTime>
+        </mote>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CVNOVJeff_blueprint</defName>
+		<label>overlord:Jeff</label>
+		<description>The Jeff class Overlord is the largest non ftl capable mechanoid warship, it is a leviathan designed by a mechanitor during the great war which uses three twin railguns and two anti air guns</description>
+		<designationCategory>Biotech</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Overlords/CVNOVJeff</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(45,45)</drawSize>
+		</graphicData>
+		
+		<rotatable>true</rotatable>
+
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		
+		<size>(19,42)</size>
+		
+		<researchPrerequisites>
+			<li>UltraMechtech</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<CVNMechComposite>30</CVNMechComposite>
+			<ComponentIndustrial>35</ComponentIndustrial>
+			<ComponentSpacer>20</ComponentSpacer>
+			<SubcoreHigh>1</SubcoreHigh>
+			<NanostructuringChip>2</NanostructuringChip>
+			<SubcoreHive>1</SubcoreHive>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<thingToSpawn>CVNOVJeff</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

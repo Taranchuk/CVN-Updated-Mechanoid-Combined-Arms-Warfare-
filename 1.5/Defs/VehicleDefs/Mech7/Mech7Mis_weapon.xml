@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>mech7mis</defName>
+		<label>ze missiles</label>
+		<description>S</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>Mortar_LaunchA</shotSound>
+		
+		<projectile>Normmech7_missile</projectile>
+		<reloadTimer>15.5</reloadTimer>
+		<warmUpTimer>10.4</warmUpTimer>
+		
+		<magazineCapacity>30</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<hitFlags>IntendedTarget</hitFlags>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>3.95</rotationSpeed>
+		
+		<projectileOffset>1.1</projectileOffset>
+		
+		<minRange>10</minRange>
+		<maxRange>999</maxRange>
+		
+		
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>1</ticksBetweenShots>
+				<ticksBetweenBursts>60</ticksBetweenBursts>
+				<spreadRadius>10</spreadRadius>
+				<label>Single</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>Things/Vehicles/Mechtek/justafuckingsquare</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoMissile</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+
+</Defs>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>cvnexorailgun</defName>
+		<label>Exostrider Railgun</label>
+		<description>S</description>
+		<projectile>exorailgunshot</projectile>
+		<turretType>Rotatable</turretType>
+		<shotSound>ShotExorailgun</shotSound>
+		<magazineCapacity>1</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		<chargePerAmmoCount>5</chargePerAmmoCount>
+		<reloadTimer>3.0</reloadTimer>
+		<warmUpTimer>10</warmUpTimer>
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>0.65</rotationSpeed>
+		
+		<projectileOffset>1</projectileOffset>
+		
+		<minRange>20</minRange>
+		<maxRange>400.9</maxRange>
+			
+			<recoil>
+			<distanceTotal>0.2</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.05</speedMultiplierPostRecoil>
+			</recoil>
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<label>Single</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+		<graphicData> 
+           		<texPath>Things/Vehicles/Exostrider/ExoStryder_Cannon</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(9, 9)</drawSize>
+					<layer>1</layer>
+		</graphicData>
+		
+		<graphics>
+			<li>
+				<recoil>
+					<distanceTotal>0.85</distanceTotal>
+					<distancePerTick>0.3</distancePerTick>
+					<speedMultiplierPostRecoil>0.01</speedMultiplierPostRecoil>
+				</recoil>
+				<graphicData>
+            				<texPath>Things/Vehicles/Exostrider/ExoStryder_Recoil</texPath>
+					<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+					<shaderType>CutoutComplexPattern</shaderType>
+					<drawSize>(9, 9)</drawSize>
+					<layer>0</layer>
+				</graphicData>
+			</li>
+		</graphics>
+		
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoBluestandard</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+</Defs>
