@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThingDef ParentName="BaseBullet">
+		<defName>CVNAdamrocket</defName>
+		<label>high-explosive shell</label>
+		<thingClass>taranchuk_projectiletrails.RocketWithTrails</thingClass>
+		<graphicData>
+			<texPath>Things/projectiles/Missile_Proj</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(1.5, 1.5)</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<speed>70</speed>
+      			<flyOverhead>true</flyOverhead>
+			<explosionRadius>2</explosionRadius>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<modExtensions>
+			<li Class="taranchuk_projectiletrails.RocketExtension">
+				<archHeightMultiplier>1</archHeightMultiplier>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>OVAdamRocketpod</defName>
+		<label>Storm Missiles</label>
+		<description>S</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>Shot_Autocannon</shotSound>
+		
+		<projectile>CVNAdamrocket</projectile>
+		<reloadTimer>10.0</reloadTimer>
+		<warmUpTimer>1.0</warmUpTimer>
+		
+		<magazineCapacity>6</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		<hitFlags>None</hitFlags>
+		
+		<autoSnapTargeting>true</autoSnapTargeting>
+		<rotationSpeed>20</rotationSpeed>
+		
+		<projectileOffset>1.0</projectileOffset>
+		
+		<minRange>5</minRange>
+		<maxRange>40.0</maxRange>
+		
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>30</ticksBetweenShots>
+				<ticksBetweenBursts>80</ticksBetweenBursts>
+				<forcedMissRadius>5</forcedMissRadius>
+				<label>Burst</label>
+				<texPath>UI/Gizmos/FireRate_Burst</texPath>
+			</li>
+		</fireModes>
+
+		<graphicData>
+			<texPath>Things/Vehicles/Overlords/Adamrocketpod</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2, 2)</drawSize>
+			<layer>-1</layer>
+		</graphicData>
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoMissile</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+</Defs>

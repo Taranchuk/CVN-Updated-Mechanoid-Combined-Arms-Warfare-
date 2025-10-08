@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <FleckDef ParentName="FleckFeedbackBase">
+    <defName>CVN_WaypointMech7</defName>
+    <graphicData>
+      <texPath>Things/projectiles/Proj._EnergyBall</texPath>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef Abstract="True" Name="EyeGlowFleck" ParentName="FleckBase_Thrown">
+    <graphicData>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0</fadeInTime>
+    <solidTime>0.3</solidTime>
+	<fadeOutTime>0.1</fadeOutTime>
+  </FleckDef>
+
+  <FleckDef ParentName="EyeGlowFleck">
+    <defName>GEG_EyeGlowFleck</defName>
+    <graphicData>
+	  <drawSize>0.88</drawSize>
+      <texPath>Things/Mote/RedEyeGlow</texPath>
+    </graphicData>
+  </FleckDef>
+
+<AbilityDef>
+        <defName>CVNWitchHoleI</defName>
+        <label>Void Undertow</label>
+        <description>Pull all targets in the chosen location center, for every unit pulled 5 damage will be dealt to all targets</description>
+        <iconPath>Things/heatbeam_DiffuseA</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <hostile>true</hostile>
+        <statBases>
+                </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.25</warmupTime>
+            <range>24.9</range>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+          <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDef>PsycastPsychicEffect</fleckDef>
+          </li>
+          <li Class="VehicleAbility.CompProperties_PullTowardCenter">
+                <radius>5.0</radius>
+                <affectOnlyHostile>false</affectOnlyHostile> <!-- default is true-->
+                <effecterDef>VoidICANTFUCKINGSPELL</effecterDef>
+                
+                <damageDef>Blunt</damageDef>
+                <damageAmount>5</damageAmount>
+                <armorPen>1.0</armorPen>
+                
+                <pullTowardTargetPosition>true</pullTowardTargetPosition>
+                
+                <flyerThingDef>FlyerDef_Pull</flyerThingDef> <!-- IMPORTANT-->
+                <!-- <soundDef>Pawn_Mech_Apocriton_Ambience</soundDef>                 -->
+            </li>
+        </comps>
+    </AbilityDef>
+
+<ThingDef ParentName="PawnFlyerBase">
+        <defName>FlyerDef_Pull</defName>
+        <thingClass>VehicleAbility.PawnFlyer_Pulled</thingClass>
+        <pawnFlyer>
+            <flightDurationMin>0.2</flightDurationMin>
+            <flightSpeed>13</flightSpeed>
+        </pawnFlyer>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>	
+	<Vehicles.VehicleDef ParentName="BaseVehiclePawn">
+		<defName>CVNGravitywell</defName>
+		<label>Gravity Well</label>
+		<description>The Gravity Well is a large mantis like mech which manipulates gravity as it's primary weapon, this allows the Gravity Well to stay light and much faster than similar walkers but just as armored as one above it's weight class, the Gravity Well walker primarily uses three abilities, it's melee strikes which remove then collapses gravitational energy onto a location, it's Phase Walk, which it utilizes the energy intensive cloaking device to sneak to the target location and finally the Void Undertow which drags all targets in an area to a singular point and causes them to take minor blunt damage for each unit that was pulled.
+\n\n&lt;color=#FFA500&gt;Recharges claws with low energy canisters .&lt;/color&gt; \n\n&lt;color=#00ddc0&gt;Requires 8 bandwith, has no capacity for advisory crew, powered by mechanoid cells similar to those found in clusters, uses 1 energy to recharge claws.&lt;/color&gt; \n\n&lt;color=#FF0000&gt; Hostile Gravitywells will pull your frontline into one location to cut them all down, the Gravitywell will close the initial distance using it's phasewalk.&lt;/color&gt;</description>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Gravitywell/MMantis</texPath>
+			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(9, 9)</drawSize>
+			<color>(200, 200, 200)</color>
+			<colorTwo>(65, 75, 80)</colorTwo>
+			<colorThree>(45, 50, 45)</colorThree>
+		</graphicData> 
+
+		<fillPercent>0.6</fillPercent>
+		
+		<buildDef>CVNGravitywell_build</buildDef>
+		
+		<size>(6, 6</size>
+		
+		<vehicleCategory>Combat</vehicleCategory>
+		<techLevel>Industrial</techLevel>
+		<vehicleType>Land</vehicleType>
+		
+		<statBases>
+			<ArmorRating_Blunt>0.38</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+			<Flammability>0</Flammability>
+			<MarketValue>5240</MarketValue>
+		<BandwidthCost>8</BandwidthCost>
+		<ControlTakingTime>5</ControlTakingTime>
+		</statBases>
+		
+		<vehicleStats>
+			<Mass>1</Mass>
+			<MoveSpeed>9.2</MoveSpeed>
+			<CargoCapacity>300</CargoCapacity>
+			<RepairRate>4</RepairRate>
+		</vehicleStats>
+		
+		
+		<race>
+			<baseBodySize>26.5</baseBodySize>
+		</race>
+		
+		<properties>
+			<vehicleJobLimitations>
+				<li>(RepairVehicle, 20)</li>
+			</vehicleJobLimitations>
+			<diagonalRotation>false</diagonalRotation>
+			<damageDefMultipliers>
+    <li>
+         <key>MechBandShockwave</key>
+         <value>0</value>
+    </li>
+    <li>
+         <key>Bomb</key>
+         <value>1.0</value>
+    </li>
+</damageDefMultipliers>
+			<roles>
+
+			</roles>
+		</properties>
+		
+		<components>
+			<li>
+				<key>Engine</key>
+				<label>Black Magic Reactor</label>
+				<health>90</health>
+				<priorityStatEfficiency>true</priorityStatEfficiency>
+				<depth>External</depth>
+				
+				
+				
+				<categories>
+					<li>MoveSpeed</li>
+				</categories>
+			</li>
+			<li>
+				<key>FrontArmorPlating</key>
+				<label>Front Exterior Hull Plates</label>
+				<health>200</health>
+				<depth>External</depth>
+				<armor>
+					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+				</armor>
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<side>Front</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>LeftArmorPlating</key>
+				<label>Left Exterior Hull Plates</label>
+				<health>200</health>
+				<depth>External</depth>
+				<armor>
+					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+				</armor>
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<side>Left</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>RightArmorPlating</key>
+				<label>Right Exterior Hull Plates</label>
+				<health>200</health>
+				<depth>External</depth>
+				<armor>
+					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+				</armor>
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<side>Right</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>BackArmorPlating</key>
+				<label>Rear Exterior Hull Plates</label>
+				<health>180</health>
+				<depth>External</depth>
+				<armor>
+					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+				</armor>
+				<hitbox>
+					<fallthrough>false</fallthrough>
+					<side>Back</side>
+				</hitbox>
+			</li>
+			<li>
+				<key>Uraniumrecycler</key>
+				<label>Uranium Recycler</label>
+				<health>70</health>
+				<depth>Internal</depth>
+
+			</li>
+			<li>
+				<key>Exteriorview</key>
+				<label>Sensor Clusters</label>
+				<health>80</health>
+				<depth>Internal</depth>
+				<hitWeight>5</hitWeight>
+
+			</li>
+			<li>
+				<key>Aicontrol</key>
+				<label>Subcore Control Interface</label>
+				<health>120</health>
+				<depth>Internal</depth>
+				<hitWeight>5</hitWeight>
+
+			</li>
+			<li>
+				<key>Subcoresystems</key>
+				<label>Subcore Housing</label>
+				<health>80</health>
+				<depth>Internal</depth>
+			</li>
+			<li>
+				<key>Roof</key>
+				<label>Top Exterior Hull Plates</label>
+				<health>200</health>
+				<depth>External</depth>
+				<hitWeight>10</hitWeight>
+				
+				<armor>
+					<ArmorRating_Blunt>1.48</ArmorRating_Blunt>
+					<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+				</armor>
+			</li>
+		</components>
+
+		<comps>
+      <li Class="VehicleMechanitorControl.CompProperties_MechanitorControl">
+		<bandwidthGain>0</bandwidthGain>
+		<mechControlRange>0</mechControlRange>
+      </li>
+      <li Class="CompProperties_OverseerSubject"></li>
+	  <li Class="taranchuk_vehicleabilities.CompProperties_Abilities">
+		<abilities>
+			<li>CVN_BurrowII</li>
+			<li>CVNWitchHoleI</li>
+		</abilities>
+	  </li>
+			<li Class="Vehicles.CompProperties_VehicleTurrets">
+				<turrets>
+					<li>
+						<turretDef>GravityRemovalBlade</turretDef>
+						
+						<renderProperties>
+							<north>(0, -0.5)</north>
+							<south>(0, 1)</south>
+							<east>(-0.5, 0)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Main Turret</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>cannon1</key>
+					</li>
+					<li>
+						<turretDef>GravityRemovalBlade</turretDef>
+						
+						<renderProperties>
+							<north>(0, -0.5)</north>
+							<south>(0, 1)</south>
+							<east>(-0.5, 0)</east>
+						</renderProperties>
+						
+						<gizmoLabel>Main Turret</gizmoLabel>
+						
+						<aimPieOffset>(0, 2.55)</aimPieOffset>
+						
+						<key>cannon2</key>
+					</li>
+				</turrets>
+			</li>
+		</comps>
+	</Vehicles.VehicleDef>
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>GravityWellAbscence</defName>
+	<label>Abscence</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+            <texPath>Things/blade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4, 4)</drawSize>
+    </graphicData>
+    <projectile>
+      <speed>100</speed>
+      <explosionRadius>2.9</explosionRadius >
+      <damageDef>Bomb</damageDef>
+      <explosionEffect>VoidICANTFUCKINGSPELL</explosionEffect>   <!-- put your effecter def stuff on this place, be mind this kinda only for projecitle_explosive thing class-->
+      <explosionDelay>20</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+  <EffecterDef>
+    <defName>VoidICANTFUCKINGSPELL</defName>  <!-- le def name for your stuff and such -->
+    <children>						 <!-- what happen when you call the effect -->
+	  <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>CVN_GravityImpact</fleckDef>
+        <burstCount>1</burstCount>
+        <scale>1</scale>
+		<rotation>0</rotation>
+		<spawnLocType>OnSource</spawnLocType>
+		<positionLerpFactor>0.5</positionLerpFactor>
+      </li>
+	  <li>
+        <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+        <fleckDef>CVNDiffuseB</fleckDef>
+        <burstCount>1</burstCount>
+        <spawnLocType>OnSource</spawnLocType>
+      </li>
+    </children>
+  </EffecterDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>CVN_GravityImpact</defName>
+    <altitudeLayer>LightingOverlay</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.3</solidTime>
+    <fadeOutTime>0.2</fadeOutTime>
+	<growthRate>1</growthRate>
+	<drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <texPath>Things/voidthunder_impact</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>4,4</drawSize>
+      <color>(1, 1, 1, 0.9)</color>
+    </graphicData>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>CVNDiffuseB</defName>
+    <altitudeLayer>LightingOverlay</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.4</solidTime>
+    <fadeOutTime>0.3</fadeOutTime>
+	<growthRate>14</growthRate>
+	<drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <texPath>Things/heatbeam_DiffuseA</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1,1</drawSize>
+      <color>(1, 1, 1, 0.4)</color>
+    </graphicData>
+  </FleckDef>
+
+	<Vehicles.VehicleTurretDef ParentName="VehicleTurretBase">
+		<defName>GravityRemovalBlade</defName>
+		<label>Gravity removal blade</label>
+		<description>Blade</description>
+		
+		<turretType>Rotatable</turretType>
+		<shotSound>CullBladeOne</shotSound>
+		
+		<projectile>GravityWellAbscence</projectile>
+		<reloadTimer>0.0</reloadTimer>
+		<warmUpTimer>0.4</warmUpTimer>
+		
+		<magazineCapacity>1</magazineCapacity>
+		<genericAmmo>true</genericAmmo>
+		
+		
+		<autoSnapTargeting>false</autoSnapTargeting>
+		<rotationSpeed>2.95</rotationSpeed>
+		
+		<projectileOffset>2.1</projectileOffset>
+		
+		<minRange>0</minRange>
+		<maxRange>7.9</maxRange>
+		
+		<recoil>
+			<distanceTotal>0.15</distanceTotal>
+			<distancePerTick>0.05</distancePerTick>
+			<speedMultiplierPostRecoil>0.1</speedMultiplierPostRecoil>
+		</recoil>
+		
+		
+		<fireModes>
+			<li>
+				<shotsPerBurst>1</shotsPerBurst>
+				<ticksBetweenShots>50</ticksBetweenShots>
+				<ticksBetweenBursts>50</ticksBetweenBursts>
+				<label>Burst</label>
+				<texPath>UI/Gizmos/FireRate_Single</texPath>
+			</li>
+		</fireModes>
+
+
+		<graphicData>
+			<texPath>Things/Vehicles/Mechtek/justafuckingsquare</texPath>
+			<graphicClass>Vehicles.Graphic_Turret</graphicClass>
+			<shaderType>CutoutComplexPattern</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		
+		<ammunition>
+			<thingDefs>
+				<li>CVNAmmoBluestandard</li>
+			</thingDefs>
+		</ammunition>
+	</Vehicles.VehicleTurretDef>
+</Defs>

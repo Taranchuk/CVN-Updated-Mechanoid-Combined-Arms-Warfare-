@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CVNOVAdam_blueprint</defName>
+		<label>overlord gunship:Adam</label>
+		<description>Overlord-Adam Class, the smallest of the overlords, measuring generously at 7x7 meters, based off the designs of Adam Varkish, a mechanitor that believed fielding as many troops as possible was the best way, preferring to use lancers to overwhelm any target even aircraft.
+Adam is capable of not only maintaining the most bandwith for only using a single HIve subcore, but also being able to ripscan downed humans to then gestate more soldiers on the go, creating a cruel cycle of battle. \n\n&lt;color=#FFA500&gt;Requires Missile hulls for rocket pods and Standardized mechanoid AP rounds for the shredder.&lt;/color&gt; \n\n&lt;color=#00ddc0&gt;Can do all the functions required of a mechanitor besides gestating and reviving heavy and ultraheavy mechanoids this is more a limitation of Adam's size, additionally being very weak to anti air means adam is not meant for frontline combat but can support.&lt;/color&gt; \n\n&lt;color=#FF0000&gt;Hostile Adams are very rare and often very dangerous accompanied by their prefered doctrine, With adams you'll find yourself swamped often with Scythers, Lancers and Militors.&lt;/color&gt;</description>
+	
+		<designationCategory>Biotech</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Overlords/CVNOVAdam</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(7.5, 7.5)</drawSize>
+		</graphicData>
+		
+		<rotatable>true</rotatable>
+
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		
+		<size>(7,7)</size>
+		
+		<researchPrerequisites>
+			<li>UltraMechtech</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<CVNMechComposite>10</CVNMechComposite>
+			<ComponentIndustrial>15</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
+			<SubcoreHigh>1</SubcoreHigh>
+			<NanostructuringChip>1</NanostructuringChip>
+			<SubcoreHive>1</SubcoreHive>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<thingToSpawn>CVNOVAdam</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

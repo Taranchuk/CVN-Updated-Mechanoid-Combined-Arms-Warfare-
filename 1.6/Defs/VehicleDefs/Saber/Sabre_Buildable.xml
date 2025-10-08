@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CVN_MBT_blueprint</defName>
+		<label>Sabre</label>
+		<description>A relatively light tank designed to be mass produced and used against enemy armored vehicles, it's primary cannon can reliably penetrate any commonly found heavy armor, the Sabre was made in the Schweben design doctrine, focusing on all terrain hovering craft that are substantially easier to deal with alone but the threat becomes innumerably larger with more units covering their weaknesses.\n\n&lt;color=#FFA500&gt;Uses Low energy canisters for ammo .&lt;/color&gt; \n\n&lt;color=#00ddc0&gt;Requires 6 bandwith, can house two advisory passengers, powered by mechanoid cells similar to those found in clusters, uses 5 energy per shot of the primary cannon.&lt;/color&gt; \n\n&lt;color=#FF0000&gt; Hostile Sabres are sledgehammers against your mechanized division, but largely useless against air or small moving targets.&lt;/color&gt;</description>
+				<designationCategory>Biotech</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Sabre/Sabre</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3, 4)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>1000</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(3, 4)</size>
+		
+		<researchPrerequisites>
+			<li>HighMechtech</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<CVNMechComposite>4</CVNMechComposite>
+			<ComponentIndustrial>8</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+			<SubcoreRegular>3</SubcoreRegular>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		
+		<thingToSpawn>CVN_MBT</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CVN_ExostriderC_blueprint</defName>
+		<label>Exostrider Thunderlord</label>
+<description>The exostrider is a colossal six legged mech that employs a single large weapon to devistating effect, primarily used as a means to support troops from the back has a small risk of friendly fire if not used carefully \n\nThis version employs a Electro orb cannon, releasing a slow moving projectile which has a large area of effect.
+\n\n&lt;color=#FFA500&gt;Requires 5 Low Energy Canisters to fire the Wave generator.&lt;/color&gt; \n\n&lt;color=#00ddc0&gt;Provides 30 bandwith, has no capacity for advisory crew, powered by mechanoid cells similar to those found in clusters, Provides a command range of 50.&lt;/color&gt; \n\n&lt;color=#FF0000&gt; Hostile Thunderlord Exostriders are the most consistently dangerous, releasing large static shocks however dealing minimal damage to structures.&lt;/color&gt;</description>
+		<designationCategory>Biotech</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Exostrider/Exostryder</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(9, 12)</drawSize>
+		</graphicData>
+		
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>12000</WorkToBuild>
+			<Flammability>0.05</Flammability>
+		</statBases>
+		
+		<size>(4, 10)</size>
+		
+		<researchPrerequisites>
+			<li>UltraMechtech</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<CVNMechComposite>30</CVNMechComposite>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
+			<SubcoreHigh>3</SubcoreHigh>
+			<SubcoreBasic>8</SubcoreBasic>
+			<SignalChip>10</SignalChip>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		
+		<thingToSpawn>CVN_ExostriderC</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>

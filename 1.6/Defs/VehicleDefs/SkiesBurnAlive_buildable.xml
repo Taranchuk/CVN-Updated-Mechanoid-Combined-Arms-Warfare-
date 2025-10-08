@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<Vehicles.VehicleBuildDef ParentName="VehicleBaseBuildable">
+		<defName>CVNSkiesBurnAlive_Buildable</defName>
+		<label>Skies Burn Alive</label>
+		<description>The G3 Geist is a large bomber which can release a massive variety of bombs, it pulls in it's heat sinks to reduce drag while still maintaining cooling by them sliding into the air intakes, the plating is thin for such a large craft but that thin hull is capable of flattening continents. \n\n&lt;color=#00ddc0&gt;Requires 25 bandwith, can house two advisory passengers, powered by mechanoid cells similar to those found in clusters.&lt;/color&gt; \n\n&lt;color=#FF0000&gt; Hostile Geists will carpet bomb the area while having a specific target in mind, they have no means of fighting off air targets however.&lt;/color&gt;</description>
+		<designationCategory>Biotech</designationCategory>
+		
+		<graphicData>
+			<texPath>Things/Vehicles/Geist/G3GeistLanded</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(23,12)</drawSize>
+		</graphicData>
+		
+		<rotatable>true</rotatable>
+
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		
+		<size>(12,12)</size>
+		
+		<researchPrerequisites>
+			<li>UltraMechtech</li>
+		</researchPrerequisites>
+		
+		<costList>
+			<CVNMechComposite>15</CVNMechComposite>
+			<ComponentIndustrial>35</ComponentIndustrial>
+			<ComponentSpacer>20</ComponentSpacer>
+			<SubcoreHigh>2</SubcoreHigh>
+			<NanostructuringChip>2</NanostructuringChip>
+		</costList>
+		
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<thingToSpawn>CVNSkiesBurnAlive</thingToSpawn>
+		
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+	</Vehicles.VehicleBuildDef>
+</Defs>
