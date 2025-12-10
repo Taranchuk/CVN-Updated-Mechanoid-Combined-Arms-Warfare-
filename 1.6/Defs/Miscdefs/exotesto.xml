@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>exorailgunshot</defName>
 		<label>gauss rifle sabot</label>
 		<projectile>
@@ -11,7 +11,7 @@
 			<stoppingPower>2</stoppingPower>
 			<speed>350</speed>
 		</projectile>
-		<thingClass>VFECore.ExpandableBullet</thingClass>
+		<thingClass>VEF.Weapons.ExpandableBullet</thingClass>
 		<graphicData>
 			<texPath>Things/projectiles/Proj_RailgunFadeIn</texPath>
 			<texPathFadeOut>Things/projectiles/Proj_RailgunFadeOut</texPathFadeOut>
@@ -51,7 +51,7 @@
 			<li>Marble</li>
 			<li>SmoothedMarble</li>
 		</stopWhenHitAt>
-	</VFECore.ExpandableProjectileDef>
+	</VEF.Weapons.ExpandableProjectileDef>
 
 	<HediffDef>
 		<defName>cvnlivingbomb</defName>
@@ -66,7 +66,7 @@
       <li Class="HediffCompProperties_Disappears">
         <disappearsAfterTicks>900</disappearsAfterTicks>
       </li>
-			<li Class="AnimalBehaviours.HediffCompProperties_Exploder">
+			<li Class="VEF.AnimalBehaviours.HediffCompProperties_Exploder">
 				<explosionForce>5</explosionForce>
 				<damageDef>Bomb</damageDef>
 			</li>
@@ -99,7 +99,7 @@
 
 
 
-	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+	<VEF.Weapons.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>CVNmoleculardestabalizationwave</defName>
 		<label>Disruption Wave</label>
 		<projectile>
@@ -109,7 +109,7 @@
 			<stoppingPower>2</stoppingPower>
 			<speed>60</speed>
 		</projectile>
-		<thingClass>VFECore.ExpandableBullet</thingClass>
+		<thingClass>VEF.Weapons.ExpandableBullet</thingClass>
 		<graphicData>
 			<texPath>Things/projectiles/molecularde/molecular</texPath>
 			<texPathFadeOut>Things/projectiles/molecularde/molecularFadeOut</texPathFadeOut>
@@ -130,7 +130,7 @@
 		<disableVanillaDamageMethod>true</disableVanillaDamageMethod>
 		<stopWhenHit>false</stopWhenHit>
 		<wideAtStart>True</wideAtStart>
-	</VFECore.ExpandableProjectileDef>
+	</VEF.Weapons.ExpandableProjectileDef>
 
   <ThingDef ParentName="BaseBullet">
     <defName>shockandballlightning</defName>

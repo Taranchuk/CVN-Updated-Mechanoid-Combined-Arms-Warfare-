@@ -22,7 +22,7 @@
 		
 		<size>(3, 4)</size>
 
-		<vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		<!-- <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions> -->
 		<vehicleCategory>Combat</vehicleCategory>
 		<techLevel>Industrial</techLevel>
 		<vehicleType>Land</vehicleType>

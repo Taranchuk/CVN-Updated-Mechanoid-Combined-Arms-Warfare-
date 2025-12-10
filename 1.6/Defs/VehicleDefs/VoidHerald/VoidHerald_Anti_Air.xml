@@ -62,7 +62,7 @@
 		<genericAmmo>true</genericAmmo>
 		<chargePerAmmoCount>5</chargePerAmmoCount>
 		
-		<hitFlags>IntendedTarget</hitFlags>
+		
 		
 		<autoSnapTargeting>false</autoSnapTargeting>
 		<rotationSpeed>2.95</rotationSpeed>

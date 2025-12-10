@@ -17,7 +17,7 @@
 		<magazineCapacity>1</magazineCapacity>
 		<genericAmmo>true</genericAmmo>
 		
-		<hitFlags>IntendedTarget</hitFlags>
+		
 		
 		<autoSnapTargeting>false</autoSnapTargeting>
 		<rotationSpeed>2.95</rotationSpeed>

@@ -23,7 +23,7 @@
 
 		<size>(5,8)</size>
 		<uiIconScale>0.85</uiIconScale>
-		 <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions>
+		 <!-- <vehicleMovementPermissions>NoDriverNeeded</vehicleMovementPermissions> -->
 		<vehicleCategory>Transport</vehicleCategory>
 		<techLevel>Industrial</techLevel>
 		<vehicleType>Air</vehicleType>
