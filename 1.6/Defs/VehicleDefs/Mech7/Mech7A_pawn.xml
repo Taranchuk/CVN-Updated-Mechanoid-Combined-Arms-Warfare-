@@ -255,8 +255,8 @@
 					<texPath>Gizmo/FaceTargetStop_Icon</texPath>
 				</cancelFaceTarget>
 				<chaseTarget>
-					<label>Chase target (flight)</label>
-					<description>Chase target while flying.</description>
+					<label>Chase Mode</label>
+					<description>Select a target to chase. Click to choose chase behavior.</description>
 					<texPath>Gizmo/ChaseTarger_Icon</texPath>
 				</chaseTarget>
 			</flightCommands>
@@ -288,6 +288,9 @@
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
 			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
 			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+			<flightSpeedCirclingPerTick>0.8</flightSpeedCirclingPerTick>
+			<ellipseMajorAxis>120</ellipseMajorAxis>
+			<ellipseMinorAxis>60</ellipseMinorAxis>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>true</moveWhileTakingOff>
@@ -295,6 +298,7 @@
 				<li>Medium</li>
 				<li>Heavy</li>
 			</runwayTerrainRequirements>
+			<canFlyInSpace>True</canFlyInSpace>
 			<flightGraphicData>
 			<texPath>Things/Vehicles/Mechtek/Mechtek</texPath>
 			<graphicClass>Vehicles.Graphic_Vehicle</graphicClass>
