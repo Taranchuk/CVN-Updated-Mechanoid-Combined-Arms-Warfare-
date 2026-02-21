@@ -245,8 +245,8 @@
 			<flightSpeedTurningPerTick>0.2</flightSpeedTurningPerTick>
 			<turnAnglePerTick>0.4</turnAnglePerTick>
 			<turnAngleCirclingPerTick>2</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurningChaseMode>30</distanceFromTargetToStartTurningChaseMode>
-			<distanceFromTargetToStartTurningCircleMode>20</distanceFromTargetToStartTurningCircleMode>
+			<maxDistanceFromTargetElliptical>30</maxDistanceFromTargetElliptical>
+			<maxDistanceFromTargetCircle>20</maxDistanceFromTargetCircle>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>false</moveWhileTakingOff>

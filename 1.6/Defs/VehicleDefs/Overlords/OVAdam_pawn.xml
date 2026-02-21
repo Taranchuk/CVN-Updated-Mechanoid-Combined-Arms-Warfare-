@@ -258,8 +258,8 @@ Adam is capable of not only maintaining the most bandwith for only using a singl
 			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
 			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+			<maxDistanceFromTargetElliptical>20</maxDistanceFromTargetElliptical>
+			<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>false</moveWhileTakingOff>

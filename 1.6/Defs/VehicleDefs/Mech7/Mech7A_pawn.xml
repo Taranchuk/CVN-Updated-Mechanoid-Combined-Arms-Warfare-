@@ -286,8 +286,8 @@
 			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
 			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+			<maxDistanceFromTargetElliptical>40</maxDistanceFromTargetElliptical>
+			<maxDistanceFromTargetCircle>20</maxDistanceFromTargetCircle>
 			<flightSpeedCirclingPerTick>0.8</flightSpeedCirclingPerTick>
 			<ellipseMajorAxis>120</ellipseMajorAxis>
 			<ellipseMinorAxis>60</ellipseMinorAxis>
