@@ -272,7 +272,7 @@
 						<CVNAmmoBluestandard>300</CVNAmmoBluestandard>
 						<CVNAmmoRedstandard>300</CVNAmmoRedstandard>
 					</npcStock>
-					<gunshipMode>Hovering</gunshipMode>
+					<chaseMode>Hovering</chaseMode>
 					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>

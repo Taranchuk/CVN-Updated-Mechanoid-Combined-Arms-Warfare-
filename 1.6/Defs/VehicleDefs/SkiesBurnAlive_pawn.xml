@@ -346,7 +346,7 @@
 					<npcStock>
 						<CVNAmmoMissile>50</CVNAmmoMissile>
 					</npcStock>
-					<gunshipMode>Chasing</gunshipMode>
+					<chaseMode>Direct</chaseMode>
 					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>

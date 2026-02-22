@@ -358,7 +358,7 @@
 					<npcStock>
 						<CVNAmmoMissile>60~120</CVNAmmoMissile>
 					</npcStock>
-					<gunshipMode>Hovering</gunshipMode>
+					<chaseMode>Hovering</chaseMode>
 					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>
