@@ -203,12 +203,6 @@
 					<description>Toggle flight mode.</description>
 					<texPath>UI/Abilities/Waterskip</texPath>
 				</flightMode>
-				<!-- WIP feature. Didn't manage to achieve fully autonomous landing, but maybe can be finished later
-				<landOnGround>
-					<label>Land on ground</label>
-					<description>Designate a landing plan. Select an endpoint of the runway and a starting point for landing.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
-				</landOnGround> -->
 				<hoverMode>
 					<label>Hover mode</label>
 					<description>Toggle hover mode.</description>
@@ -256,8 +250,8 @@
 			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
 			<turnAnglePerTick>2</turnAnglePerTick>
 			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+			<maxDistanceFromTargetElliptical>20</maxDistanceFromTargetElliptical>
+			<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 			<takeoffTicks>300</takeoffTicks>
 			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>true</moveWhileTakingOff>
@@ -358,7 +352,7 @@
 					<npcStock>
 						<CVNAmmoMissile>60~120</CVNAmmoMissile>
 					</npcStock>
-					<gunshipMode>Hovering</gunshipMode>
+					<chaseMode>Hovering</chaseMode>
 					<distanceFromTarget>30</distanceFromTarget>
 				</gunshipSettings>
 			</AISettings>

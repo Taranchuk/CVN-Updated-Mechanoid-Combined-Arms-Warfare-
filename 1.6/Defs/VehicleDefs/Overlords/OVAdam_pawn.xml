@@ -227,12 +227,6 @@ Adam is capable of not only maintaining the most bandwith for only using a singl
 					<description>Toggle flight mode.</description>
 					<texPath>Gizmo/TakeOff_Icon</texPath>
 				</flightMode>
-				<!-- WIP feature. Didn't manage to achieve fully autonomous landing, but maybe can be finished later
-				<landOnGround>
-					<label>Land on ground</label>
-					<description>Designate a landing plan. Select an endpoint of the runway and a starting point for landing.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
-				</landOnGround> -->
 				<hoverMode>
 					<label>Hover mode</label>
 					<description>Toggle hover mode.</description>
@@ -256,12 +250,12 @@ Adam is capable of not only maintaining the most bandwith for only using a singl
 			</flightCommands>
 			<flightSpeedPerTick>0.4</flightSpeedPerTick>
 			<flightSpeedTurningPerTick>0.3</flightSpeedTurningPerTick>
-			<turnAnglePerTick>5</turnAnglePerTick>
-			<turnAngleCirclingPerTick>5</turnAngleCirclingPerTick>
-			<distanceFromTargetToStartTurningChaseMode>20</distanceFromTargetToStartTurningChaseMode>
-			<distanceFromTargetToStartTurningCircleMode>10</distanceFromTargetToStartTurningCircleMode>
+			<turnAnglePerTick>2</turnAnglePerTick>
+			<turnAngleCirclingPerTick>1</turnAngleCirclingPerTick>
+			<maxDistanceFromTargetElliptical>20</maxDistanceFromTargetElliptical>
+			<maxDistanceFromTargetCircle>10</maxDistanceFromTargetCircle>
 			<takeoffTicks>300</takeoffTicks>
-			<landingTicks>0</landingTicks>
+			<landingTicks>300</landingTicks>
 			<moveWhileTakingOff>false</moveWhileTakingOff>
 			<runwayTerrainRequirements>
 				<li>Light</li>
