@@ -227,12 +227,6 @@ Adam is capable of not only maintaining the most bandwith for only using a singl
 					<description>Toggle flight mode.</description>
 					<texPath>Gizmo/TakeOff_Icon</texPath>
 				</flightMode>
-				<!-- WIP feature. Didn't manage to achieve fully autonomous landing, but maybe can be finished later
-				<landOnGround>
-					<label>Land on ground</label>
-					<description>Designate a landing plan. Select an endpoint of the runway and a starting point for landing.</description>
-					<texPath>UI/Abilities/Waterskip</texPath>
-				</landOnGround> -->
 				<hoverMode>
 					<label>Hover mode</label>
 					<description>Toggle hover mode.</description>
