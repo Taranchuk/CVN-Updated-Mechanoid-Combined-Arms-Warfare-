@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
+	<!-- examples of flight raids for vanilla factions 
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/FactionDef[defName="Mechanoid"]/pawnGroupMakers</xpath>
 		<value>
@@ -50,4 +51,5 @@
             </value>
         </nomatch>
     </Operation>
+	-->
 </Patch>
