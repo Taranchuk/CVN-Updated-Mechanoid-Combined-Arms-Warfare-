@@ -11,8 +11,6 @@
 				<maxAircraftCount>2</maxAircraftCount>
 				<options>
 					<Mechtek_PawnKind>3</Mechtek_PawnKind>
-					<CVNG3Geist_PawnKind>3</CVNG3Geist_PawnKind>
-					<CVNOVJeff_PawnKind>1</CVNOVJeff_PawnKind>
 					<Mech_Scyther>10</Mech_Scyther>
 					<Mech_Pikeman>10</Mech_Pikeman>
 					<Mech_Lancer>10</Mech_Lancer>
@@ -20,7 +18,7 @@
 			</li>
 		</value>
 	</Operation>
-<Operation Class="PatchOperationAdd">
+	<Operation Class="PatchOperationAdd">
         <xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers</xpath>
         <value>
             <li Class="taranchuk_flightcombat.PawnGroupMaker_FlightRaid">
@@ -30,10 +28,26 @@
                 <minAircraftCount>1</minAircraftCount>
                 <maxAircraftCount>2</maxAircraftCount>
                 <options>
-					<CVNG3Geist_PawnKind>3</CVNG3Geist_PawnKind>
-					<CVNOVJeff_PawnKind>1</CVNOVJeff_PawnKind>
+					<Mechtek_PawnKind>3</Mechtek_PawnKind>
                 </options>
             </li>
         </value>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/FactionDef[defName="Mechanoid" or defName="Pirate"]/raidArrivalLayerWhitelist</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="Mechanoid" or defName="Pirate"]/raidArrivalLayerWhitelist</xpath>
+            <value>
+                <li>Orbit</li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/FactionDef[defName="Mechanoid" or defName="Pirate"]</xpath>
+            <value>
+                <raidArrivalLayerWhitelist>
+                    <li>Orbit</li>
+                </raidArrivalLayerWhitelist>
+            </value>
+        </nomatch>
     </Operation>
 </Patch>
